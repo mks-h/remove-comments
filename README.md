@@ -39,7 +39,13 @@ Both tools use Tree-sitter for accurate, AST-based comment detection across many
 
 ### Usage
 
-Default keybinding: `<leader>rc`
+Set a keymap:
+
+```lua
+vim.keymap.set("n", "<localleader>S", function ()
+	require("nvim-remove-comments").remove_comments()
+end, { desc = "Strip comments from the current buffer" })
+```
 
 Or call directly:
 
